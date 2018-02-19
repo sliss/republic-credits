@@ -3079,7 +3079,7 @@ bool static AlreadyHave(const CInv& inv)
 // The message start string is designed to be unlikely to occur in normal data.
 // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
 // a large 4-byte int at any alignment.
-unsigned char pchMessageStart[4] = { 0xb0, 0x55, 0x9b, 0xdd }; // RepublicCredits: increase each by adding 2 to bitcoin's value.
+unsigned char pchMessageStart[4] = { 0xb0, 0x55, 0x9b, 0xdd }; // RepublicCredits: change each
 
 
 void static ProcessGetData(CNode* pfrom)
