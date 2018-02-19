@@ -1,0 +1,34 @@
+src/*.exe
+src/republiccredits
+src/republiccreditsd
+src/test_republiccredits
+.*.swp
+*.*~*
+*.bak
+*.rej
+*.orig
+*.o
+*.patch
+.republiccredits
+
+# Compilation and Qt preprocessor part
+*.qm
+Makefile
+republiccredits-qt
+RepublicCredits-Qt.app
+
+# Unit-tests
+Makefile.test
+republiccredits-qt_test
+
+# Resources cpp
+qrc_*.cpp
+
+# Qt creator
+*.pro.user
+
+# Mac specific
+.DS_Store
+build
+
+!src/leveldb*/Makefile
