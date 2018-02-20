@@ -2779,7 +2779,7 @@ bool InitBlockIndex() {
         //   vMerkleTree: 97ddfbbae6
 
         // Genesis block
-        const char* pszTimestamp = "NY Times 05/Oct/2011 Steve Jobs, Apple’s Visionary, Dies at 56";
+        const char* pszTimestamp = "NY Times 17/Feb/2018 Robert Mueller indicts 13 Russians for election interference";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -2791,13 +2791,13 @@ bool InitBlockIndex() {
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1317972665;
+        block.nTime    = 1519086378;
         block.nBits    = 0x1e0ffff0;
         block.nNonce   = 2084524493;
 
         if (fTestNet)
         {
-            block.nTime    = 1317798646;
+            block.nTime    = 1519086361;
             block.nNonce   = 385270584;
         }
 
@@ -2806,7 +2806,7 @@ bool InitBlockIndex() {
         printf("%s\n", hash.ToString().c_str());
         printf("%s\n", hashGenesisBlock.ToString().c_str());
         printf("%s\n", block.hashMerkleRoot.ToString().c_str());
-        assert(block.hashMerkleRoot == uint256("0x97ddfbbae6be97fd6cdf3e7ca13232a3afff2353e29badfab7f73011edd4ced9"));
+        assert(block.hashMerkleRoot == uint256("0xf07eb549fae81a9e1f13f6264dcc5e40009a80fb83390526f82d0340f00b0d23"));
         block.print();
         assert(hash == hashGenesisBlock);
 
